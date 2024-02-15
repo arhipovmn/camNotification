@@ -1,1 +1,7 @@
-nfsFolder
+.vscode
+venv
+__pycache__
+config.py
+main.pid
+/logs/*
+/temp/*
