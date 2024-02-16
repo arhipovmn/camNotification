@@ -30,3 +30,19 @@ Also can use: start | stop | restart | status
 ```
 * * * * * root /{PATH}/main.sh start
 ```
+
+## Conf for Logrotate
+```conf
+/{PATH}/logs/*log {
+    missingok
+    notifempty
+    daily
+    rotate 100
+    compress
+    sharedscripts
+    postrotate
+        /{PATH}/main.sh restart
+    endscript
+}
+```
+Add in: /etc/logrotate.d/camNotification
