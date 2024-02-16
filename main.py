@@ -13,9 +13,10 @@ from email import encoders
 from config import config
 from logger import logger as logerInit
 import os
-logger = logerInit()
+from PIL import Image
 
 try:
+    logger = logerInit()
     logger.info(f"Runs execution")
 
     def send_to_email(files = []):
@@ -76,6 +77,11 @@ try:
                     with open(f'temp/img{n}.jpeg', 'wb') as f:
                         for chunk in r:
                             f.write(chunk)
+                    if config['picture-wight'] > 0 and config['picture-height'] > 0:
+                        size = config['picture-wight'], config['picture-height']
+                        im = Image.open(f'temp/img{n}.jpeg')
+                        im_resized = im.resize(size, Image.LANCZOS)
+                        im_resized.save(f'temp/img{n}.jpeg', 'JPEG')
                     files.append(f'temp/img{n}.jpeg')
                     logger.info(f'{n} a picture save: temp/img{n}.jpeg')
                 else:

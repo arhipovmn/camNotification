@@ -10,4 +10,6 @@ config = {
     'email-smtp-login': '',
     'email-smtp-password': '',
     'how-many-screenshots-to-take': 6,
+    'picture-wight': 0, # default: 0 - mean images will not change (resize)
+    'picture-height': 0,
 }
