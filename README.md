@@ -18,14 +18,15 @@ pip install -r requirements.txt
 cp config.example.py config.py
 chmod u+x main.sh
 ```
-edit "config.py"...
+Edit "config.py"...
 
 ## Run
 ```bash
-./main.sh
+./main.sh start
 ```
+Also can use: start | stop | restart | status
 
-## Add in crontab:
+## Add in crontab? If you need...
 ```
-* * * * * root /{PATH}/main.sh
+* * * * * root /{PATH}/main.sh start
 ```
