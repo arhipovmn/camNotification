@@ -11,9 +11,9 @@ from email.mime.base import MIMEBase
 from email.utils import COMMASPACE, formatdate
 from email import encoders
 from config import config
-from logger import logger
+from logger import logger as logerInit
 import os
-logger = logger()
+logger = logerInit()
 
 try:
     logger.info(f"Runs execution")
@@ -92,6 +92,7 @@ try:
         send_to_email(files)
 
     def read():
+        logger = logerInit()
         logger.info('=================================')
         logger.info(f"Trying to connect to alertStream")
 
