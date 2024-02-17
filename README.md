@@ -28,7 +28,7 @@ Also can use: start | stop | restart | status
 
 ## Add in crontab? If you need...
 ```
-* * * * * {USERNAME} /{PATH}/main.sh start
+* * * * * /{PATH}/main.sh start
 ```
 
 ## Conf for Logrotate
