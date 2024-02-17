@@ -34,7 +34,7 @@ stop() {
         if kill $( cat $PID )
         then echo "done"
         fi
-        /bin/rm $PID
+        /bin/rm -f $PID
     else
         echo "no pid file. already stopped?"
     fi

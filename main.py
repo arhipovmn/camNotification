@@ -91,7 +91,7 @@ try:
                 logger.error(f'{n} a picture not save')
             finally:
                 r.close()
-                time.sleep(1.5)
+                time.sleep(1.7)
         
         logger.info(f"Successed save pictures")
 
