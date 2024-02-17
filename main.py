@@ -92,6 +92,7 @@ try:
             finally:
                 r.close()
                 time.sleep(1.7)
+        if (config['time-delay']): time.sleep(config['time-delay'])
         
         logger.info(f"Successed save pictures")
 
