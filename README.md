@@ -5,7 +5,7 @@
 ```xml
 <eventDescription>Motion alarm</eventDescription>
 ```
- * Saves N a screenshot, ~one per second (exempl URL: http://{IP}/ISAPI/Streaming/channels/{CAM_ID}/picture);  
+ * Saves N a screenshot, one per two second (exempl URL: http://{IP}/ISAPI/Streaming/channels/{CAM_ID}/picture);  
  * Send their on Email;  
  * And next again read the text stream, for again search "Motion alarm" (recurse)...
 

@@ -92,7 +92,7 @@ try:
                 logger.error(f'{n} a picture not save')
             finally:
                 r.close()
-                time.sleep(1.7)
+                time.sleep(2)
         if (config['time-delay']): time.sleep(config['time-delay'])
         
         logger.info(f"Successed save pictures")
