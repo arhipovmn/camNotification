@@ -16,10 +16,10 @@ import os
 from PIL import Image
 
 try:
-    logger = logerInit()
-    logger.info(f"Runs execution")
+    logerInit().info(f"Runs execution")
 
     def send_to_email(files = []):
+        logger = logerInit()
         logger.info(f"Trying to send pictures on email")
 
         try:
@@ -66,6 +66,7 @@ try:
         read() # recurse ...
 
     def savePic():
+        logger = logerInit()
         logger.info(f"Trying to save pictures")
 
         files = []
@@ -114,6 +115,7 @@ try:
             motion = False
             for line in r.iter_lines(decode_unicode=True):
                 if line and line == '<eventDescription>Motion alarm</eventDescription>':
+                    logger = logerInit()
                     logger.info(f"MOTION DETECTED! Stop to read the alertStream")
                     motion = True
                     r.close()
@@ -125,5 +127,5 @@ try:
 
     read()
 except Exception as inst:
-    logger.exception(inst)
-    logger.error(f"Execution stopped")
+    logerInit().exception(inst)
+    logerInit().error(f"Execution stopped")
