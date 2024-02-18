@@ -12,5 +12,5 @@ config = {
     'how-many-screenshots-to-take': 6,
     'picture-wight': 0, # default: 0 - mean images will not change (resize)
     'picture-height': 0,
-    'time-delay': 0,
+    'time-delay': 0, # after send the picture on Email
 }
