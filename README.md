@@ -26,7 +26,7 @@ Edit "config.py"...
 ```
 Also can use: start | stop | restart | status
 
-## Add in crontab? If you need...
+## Add in: "crontab -e"? If you need...
 ```
 * * * * * /{PATH}/main.sh start
 ```
@@ -34,6 +34,7 @@ Also can use: start | stop | restart | status
 ## Conf for Logrotate
 ```conf
 /{PATH}/logs/*log {
+    su {USERNAME} {USERGROUP}
     missingok
     notifempty
     daily
