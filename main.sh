@@ -66,7 +66,6 @@ case "$1" in
     'restart')
             stop
             echo "..."
-            sleep 1
             start
             ;;
     'status')
