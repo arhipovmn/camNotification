@@ -32,7 +32,7 @@ Also can use: start | stop | restart | status
 ```
 
 ## Conf for Logrotate
-```conf
+```
 /{PATH}/logs/*log {
     su {USERNAME} {USERGROUP}
     missingok
@@ -42,7 +42,7 @@ Also can use: start | stop | restart | status
     compress
     sharedscripts
     postrotate
-        /{PATH}/main.sh restart
+        sudo -u {USERNAME} /{PATH}/main.sh restart
     endscript
 }
 ```
