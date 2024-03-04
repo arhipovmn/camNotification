@@ -17,6 +17,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 cp config.example.py config.py
 chmod u+x main.sh
+mkdir temp
+mkdir logs
 ```
 Edit "config.py"...
 
