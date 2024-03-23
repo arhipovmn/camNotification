@@ -30,5 +30,5 @@ Also can use: start | stop | restart | status
 
 ## Add in: "crontab -e"? If you need...
 ```
-10 0 * * * /{PATH}/main.sh restart
+10 0 * * * /{PATH}/main.sh start
 ```
