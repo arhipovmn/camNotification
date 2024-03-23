@@ -30,5 +30,22 @@ Also can use: start | stop | restart | status
 
 ## Add in: "crontab -e"? If you need...
 ```
-10 0 * * * /{PATH}/main.sh start
+* * * * * /{PATH}/main.sh start
 ```
+
+## Conf for Logrotate
+```
+/{PATH}/logs/*log {
+    su {USERNAME} {USERGROUP}
+    missingok
+    notifempty
+    daily
+    rotate 100
+    compress
+    sharedscripts
+    postrotate
+        sudo -u {USERNAME} /{PATH}/main.sh restart
+    endscript
+}
+```
+Add in: /etc/logrotate.d/camNotification
