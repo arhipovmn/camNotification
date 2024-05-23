@@ -1,5 +1,5 @@
 config = {
-    'IP-address-for-cam-or-dvr':'',
+    'IP-address-for-cam':'',
     'channel-id-for-cam':'',
     'login-for-cam':'',
     'password-for-cam':'',
